@@ -1,0 +1,49 @@
+/* Testing stylesheet link */
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+span {
+    color: red;
+}
+
+form {
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 8px;
+    border: 2px solid #ededed;
+}
+
+input {
+    height: 30px;
+}
+
+.checkout-primary {
+    height: 38px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.checkout-secondary {
+    height: 38px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.checkout-secondary:hover {
+    background-color: lightgreen;
+}
+
+.promo-code-button {
+    height: 38px;
+    width: 38px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+

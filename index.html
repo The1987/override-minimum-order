@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="override.js"></script>
+    <title>Override Minimum Order</title>
+</head>
+
+<body onload="minOrderFunction()">
+    <h1>Override Minimum Order Scenario</h1>
+    <!-- Explain real world problem, explain solution -->
+    <p>
+        <h2>Business Problem</h2>
+        Business is currently using Salesforce B2C Commerce Cloud (formerly Demandware)<br>
+        Business only allows orders that are above a $40 also known as a "minimum order".<br>
+        Customer Service has mentioned that there will be customers who call that want to buy but are right under the minimum.<br>
+        For example: $39.99 instead of $40.00<br>
+        To accomodate situations like these I am proposing this solution.<br>
+        Utilize the Custom Preference and Conditional Statements to get around the limitations of Coupons, Promotions, and Campaigns.
+    </p>
+
+    <!-- The Custom Preference -->
+    <form class="custom-preference-form">
+        <h2>Custom Preferences</h2>
+        <p> Override Code. Default value is
+            <span>"OVER"</span>
+        </p>
+        <!-- <input value="OVER" id="custom-preference-box"/> -->
+    </form>
+
+    <!-- Promo Code Box -->
+    <form class="promo-coupon-form">
+        <h2>Checkout</h2>
+        <p>Minimum Order Value
+            <span>$
+                <span id="minOrderValue"></span>
+                .00</span>
+        </p>
+
+        <p>Promo Code Box</p>
+        <input value="" id="promo-code-box" />
+        <!-- If variable is present then remove disabled attribute from checkout button -->
+        <!-- Checkout Button -->
+        <button class="promo-code-button" onclick="addPromoCode()">+</button>
+    </form>
+    <!-- Checkout Button -->
+    <button id="checkout-button" class="checkout-primary" onclick="checkoutButtonFunction()" disabled="disabled">Checkout Button</button>
+
+
+</body>
+
+</html>
